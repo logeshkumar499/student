@@ -49,6 +49,7 @@ function resertForm(){
     document.getElementById("mark").value = "";
 }
 
+
 function searchFun(){
     let filter = document.getElementById('search').value.toUpperCase();
     let studentList = document.getElementById("studentList");
