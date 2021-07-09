@@ -79,18 +79,18 @@ function sortTable(n) {
     while (switching) {
         switching = false;
         var rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
+        for (i = 1; i <(rows.length - 1); i++) {
             var Switch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
             if (direction == "ascending") {
-                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()){
+                if (Number(x.innerHTML.toLowerCase()) > Number(y.innerHTML.toLowerCase())){
                     Switch = true;
                     break;
                 }
             } else if (direction == "descending") {
-                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())
+                if (Number(x.innerHTML.toLowerCase()) < Number(y.innerHTML.toLowerCase()))
                     {
                     Switch = true;
                     break;
